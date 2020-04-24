@@ -131,10 +131,12 @@ func HTTPS(domainNames []string, mux http.Handler) error {
 		}
 	}
 	httpsServer := &http.Server{
+		/*
 		ReadHeaderTimeout: 10 * time.Second,
 		ReadTimeout:       30 * time.Second,
 		WriteTimeout:      2 * time.Minute,
 		IdleTimeout:       5 * time.Minute,
+		*/
 		Handler:           mux,
 	}
 
